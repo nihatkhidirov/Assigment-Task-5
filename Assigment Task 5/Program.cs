@@ -8,7 +8,7 @@ namespace Assigment_Task_5
         {
             #region Task1
             //int eded = 0;
-            //for(int i =0; i<1000;i++)
+            //for(int i =1; i<1000;i++)
             //{
             //    eded = eded + i;        
             //}
@@ -22,7 +22,7 @@ namespace Assigment_Task_5
             //}
             #endregion
             #region Task2
-            //for (int i=0; i < 1000; i++)
+            //for (int i=1; i < 1000; i++)
             //{
             //    if(i%7==0 && i%8==0)
             //    {
@@ -31,7 +31,7 @@ namespace Assigment_Task_5
             //}
             #endregion
             #region Task3
-            //for(int i=0;i<1000;i++)
+            //for(int i=1;i<1000;i++)
             //  {
             //     if(i%3==0)
             //      {
@@ -41,7 +41,7 @@ namespace Assigment_Task_5
             #endregion
             #region Task4
             //int eded;
-            //for (int i = 0; i < 1000; i++)
+            //for (int i = 1; i < 1000; i++)
             //{
             //    eded =i%10;
 
@@ -55,7 +55,7 @@ namespace Assigment_Task_5
             //int eded;
             //int cem;
 
-            //for (int i = 0; i < 1000; i++)
+            //for (int i = 1; i < 1000; i++)
             //{
             //    cem = 0;
             //    eded = i;
@@ -78,7 +78,7 @@ namespace Assigment_Task_5
             // hem reqemleri cemi tek eded olsun,
             //hem I reqemi tek eded olsun
 
-            //for(int i=0;i<1000;i++)
+            //for(int i=1;i<1000;i++)
             //{
             //    int eded = i;
             //    int cem = 0;
@@ -97,7 +97,7 @@ namespace Assigment_Task_5
             //}
             #endregion
             #region Task7
-            //for(int i=0;i<1000; i++)
+            //for(int i=1;i<1000; i++)
             //{
             //    int lastdigit = i % 10;
             //    int fisrdigit = i / 100;
@@ -110,7 +110,7 @@ namespace Assigment_Task_5
             //}
             #endregion
             #region Task8
-            //for (int i = 0; i < 1000; i++)
+            //for (int i = 1; i < 1000; i++)
             //{
             //    int birincireqem = i / 100;
             //    int ortareqemesas = i / 10;
@@ -131,7 +131,7 @@ namespace Assigment_Task_5
             #endregion
             #region Task9
             //int count = 0;
-            //for (int i = 0; i < 1000; i++)
+            //for (int i = 1; i < 1000; i++)
             //{
             //    int cem = 0;
             //    int eded = i;
@@ -161,7 +161,7 @@ namespace Assigment_Task_5
             //reqemleri cemi 5 ile 7 arasinda olan en boyuk eded hansidir?
             //int count = 0;
             //int max = -1;
-            //for (int i = 0; i < 1000; i++)
+            //for (int i = 1; i < 1000; i++)
             //{
 
             //    int cem = 0;
@@ -190,48 +190,190 @@ namespace Assigment_Task_5
             //    else
             //        Console.WriteLine(max);
             #endregion
+            #region Task11
+            //int sum, digit, temp, digitsum;
+            //for (int i = 1; i < 1000; i++)
+            //{
+            //l1:
+            //    sum = 0;
+            //    digitsum = 0;
+            //    temp = i;
+            //    while (temp > 0)
+            //    {
+            //        digit = temp % 10;
+            //        if (digit == 3)
+            //        {
+            //            i++;
+            //            goto l1;
+            //        }
 
-            //1-1000 qeder ederlerin icerisinden  ele ededleri cap etki :
-            // hem polindrom olsun,
-            //hem ededin reqemleri daxilinde 3 olmasin
-            //hem ededin reqemleri cemi 10 dan boyuk olsun
-            
+            //        digitsum = digitsum + digit;
+            //        sum = sum * 10 + digit;
+            //        temp = temp / 10;
 
-            for(int i=0;i<1000;i++)
-            {
-                int birinci = i / 100;
-                int son = i % 10;
-                int orta = i / 100;
-                int orta1 = orta % 10;
-                int cem = 0;
-
-                int eded = i;
-                while(eded>0)
-                {
-                    int qaliq = eded % 10;
-                    eded /= 10;
-                    cem = cem + qaliq;
-
-                }
-                int newnum = eded;
-                int cem1 = 0;
-
-                while(newnum>0)
-                {
-                    int qaliq1 = newnum % 10;
-                    newnum /= 10;
-                    cem1 = cem1*10+ qaliq1;
-                }
-
-                {
-                    if (birinci != 3 && son != 3 && orta1 != 3 && cem > 10 && cem1 == eded)
-                    {
-                        Console.WriteLine(i);
-                    }
-                }
-            }
+            //    }
+            //    if (i == sum && digitsum > 10)
+            //    {
+            //        Console.WriteLine(i);
+            //    }
 
 
+            //}
+
+            #endregion        }
+            #region Task12
+            //for (int i = 1; i < 100000; i++)
+            //{
+            //    int temp = i;
+            //    int digit = temp % 10;
+            //    int temp1 = temp / 10;
+            //    while(temp1>0 && temp1%10==digit)
+            //    {
+            //        temp1 /= 10;
+            //    }
+            //    if(temp1 ==0)
+            //    {
+            //        int number2 = i;
+            //        if(number2%10==5)
+            //        {
+            //            continue;
+            //        }
+
+            //        int sum = 0;
+
+            //        while(number2>0)
+            //        {
+            //            sum += number2 % 10;
+            //            number2 /= 10;
+            //        }
+            //        if(sum>5)
+            //        {
+            //            Console.WriteLine(i);
+            //        }    
+            //    }
+
+            //}
+            #endregion
+            #region Task13
+            //int sum, digit, temp, digitsum;
+            //for (int i = 1; i < 100000; i++)
+            //{
+            //l1:
+            //    sum = 0;
+            //    digitsum = 0;
+            //    temp = i;
+            //    while (temp > 0)
+            //    {
+            //        digit = temp % 10;
+            //        if (digit % 2 == 0)
+            //        {
+            //            i++;
+            //            goto l1;
+            //        }
+
+            //        sum = sum * 10 + digit;
+            //        temp = temp / 10;
+
+            //    }
+            //    int temp1 = temp;
+
+            //    while (temp1 > 0)
+            //    {
+            //        int digit1 = temp1 % 10;
+            //        temp1 = temp1 / 10;
+            //        if (digit1 != 5)
+            //        {
+            //            i++;
+            //            continue;
+            //        }
+
+            //    }
+
+            //}
+            #endregion
+            #region Task14
+            //int eded1, qaliq, counter, cem, eded2, counter1;
+            //for(int i=1;i<100000;i++)
+            //{
+            //    counter1 = 0;
+            //    counter = 0;
+            //    qaliq = i % 10;
+            //    eded1 = i;
+            //    while(eded1>0)
+            //    {
+            //        if(eded1%10==6)
+            //        {
+            //            break;
+            //        }
+            //        if(eded1%100==11)
+            //        {
+            //            counter1 = 2;
+            //        }
+            //        if(eded1%10==5)
+            //        {
+            //            counter++;
+            //        }
+            //        eded1 /= 10;
+            //    }
+            //    if(counter1==2 && counter1==2)
+            //    {
+            //        eded2 = i;
+            //        cem = 0;
+            //        while(eded2>0)
+            //        {
+            //            cem += eded2 % 10;
+            //            eded2 /= 10;
+
+            //        }
+            //        if(cem>7 && cem<15)
+            //        {
+            //            Console.WriteLine(i);
+            //        }
+            //    }
+
+            //}
+            #endregion
+            #region Task15
+            //int temp, digit, sum;
+            //int[] exclude = { 0, 1, 5, 7, 9 };
+            //for (int i = 1; i <= 10000; i++)
+            //{
+            //l1:
+            //    sum = 0;
+            //    if (i % 2 == 0 || (i % 3 == 0 && i != 3) || i % 5 == 0 || i % 7 == 0)
+            //    {
+            //        continue;
+
+            //    }
+            //    temp = i;
+            //    while (temp > 0)
+            //    {
+
+            //        digit = temp % 10;
+            //        if (Array.IndexOf(exclude, digit) != -1)
+            //        {
+            //            i++;
+            //            goto l1;
+            //        }
+            //        sum += digit;
+            //        temp /= 10;
+
+            //    }
+            //    while (sum > 0)
+            //    {
+            //        digit = sum % 10;
+
+            //        if (digit == 2)
+            //        {
+            //            i++;
+            //            goto l1;
+
+            //        }
+            //        sum /= 10;
+            //        Console.WriteLine(i);
+            //    }
+            //}
+            #endregion
         }
-    }
+    } 
 }
